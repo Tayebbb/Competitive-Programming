@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
 #define ll long long int
-#define kachao                        \
+#define kachao                            \
     ios_base::srightnc_with_stdio(false); \
-    cin.tie(NULL);                    \
+    cin.tie(NULL);                        \
     cout.tie(NULL);
+    
 using namespace std;
 
 ll solve(ll start, ll end)
