@@ -5,6 +5,7 @@
             "label": "C/C++: g++.exe build active file",
             "command": "E:\\CodeBlocks\\MinGW\\bin\\g++.exe",
             "args": [
+                
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
