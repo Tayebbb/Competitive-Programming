@@ -1,43 +1,14 @@
 #include <bits/stdc++.h>
+#define yes cout << "YES" << endl;
+#define no cout << "NO" << endl;
 #define ll long long int
-#define kachao                        \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(NULL);                    \
-    cout.tie(NULL);
+#define kachao ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 using namespace std;
 
 void solve()
 {
-    ll n;
-    cin >> n;
-    map<int, int> m;
-    vector<int> v;
-    int x;
 
-    while (n--)
-    {
-        cin >> x;
-        m[x]++;
-    }
-
-    for (auto [key, freq] : m)
-        v.push_back(freq);
-
-    sort(v.begin(), v.end(), greater<ll>());
-    ll lastelement = v[0];
-    ll r = v[0];
-
-    for (int i = 1; i < v.size(); i++)
-    {
-        if (v[i] < lastelement)
-            lastelement = v[i];
-        else
-            lastelement = max(0LL, lastelement - 1); 
-        
-        r += lastelement;
-    }
-    
-    cout << r << '\n';
+   
 }
 
 int main()
