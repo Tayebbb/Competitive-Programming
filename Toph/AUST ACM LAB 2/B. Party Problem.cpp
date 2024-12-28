@@ -13,28 +13,29 @@ void solve()
 {
     ll t;
     cin >> t;
-    vector<string> v, v2;
+
+    unordered_map<string, ll> substringCount;
+    vector<string> names(t);
 
     for (int i = 0; i < t; i++)
     {
-        string s;
-        cin >> s;
-        v.push_back(s);
-        v2.push_back(v[i].substr(1));
+        cin >> names[i];
+        string substr = names[i].substr(1);
+        substringCount[substr]++;
     }
 
-    ll failedPairs = 0;
+    ll totalPairs = (t * (t - 1)) / 2;
+    ll validPairs = 0;
 
-    for (int i = 0; i < t; i++)
+    for (const auto &name : names)
     {
-        for (int j = i + 1; j < t; j++)
-        {
-            if (v2[i] != v2[j])
-            {
-                failedPairs++;
-            }
-        }
+        string substr = name.substr(1);
+        ll count = substringCount[substr];
+        validPairs += (count - 1);
     }
+
+    validPairs /= 2;
+    ll failedPairs = totalPairs - validPairs;
 
     cout << failedPairs << endl;
 }
