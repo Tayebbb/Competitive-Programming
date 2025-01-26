@@ -14,7 +14,6 @@ void solve()
     ll n, a, b;
     cin >> n >> a >> b;
     ll r = abs(a - b);
-    
     if (r % 2 == 0)
         yes 
     else no
