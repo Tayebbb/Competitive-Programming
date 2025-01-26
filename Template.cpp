@@ -16,7 +16,7 @@ int main()
 {
     kachao;
     ll t=1;
-    cin >> t;
+    //cin >> t;
     while (t--)
     {
         solve();
